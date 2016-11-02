@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Question 1</title>
+</head>
+<body>
+
+<script src="jquery-3.1.1.js"></script>
+<script src="handlebars-v4.0.5.js"></script>
+<script src= "question-1.js"> </script>
+<script type = 'template/handlebars' id= "name-template"> 
+
+
+{{#each person}}
+<span class= 'fullname'> 
+{{firstName}} {{lastName}} </span>
+
+{{#if isAdmin}}
+Admin
+{{else}}
+Not Admin
+{{/if}}
+
+<ul>
+<li> {{openSourceProjects.[0].name}} </li>
+<li>{{openSourceProjects.[1].name}} </li>
+<li>{{openSourceProjects.[2].name}} </li>
+<li>{{openSourceProjects.[3].name}} </li>
+<li>{{openSourceProjects.[4].name}} </li>
+
+</ul>
+
+
+{{/each}}
+</script>
+<div id="information"> </div>
+
+</body>
+</html>
+
+
+<!-- http://jsbin.com/huzexoxuno/edit?html,js,console,output JSBIN file-->
